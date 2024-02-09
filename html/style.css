@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap');
+
+:root{
+    --primary-color: red;
+    --grey: grey;
+    --font-size: 62.5%;
+    --overlay: #0000009c
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    max-width: 100%;
+    border-radius: 5px;
+    display: block;
+    object-fit: cover;
+}
+
+.center{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    object-fit: cover;
+}
+
+.bg-primary{
+    background-color: red;
+    color: white;
+}
+
+/* Header*/
+header{
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+    width: 100%;
+    z-index: 1000;
+}
+
+#logo{
+    display: none;
+}
+
+nav li a{
+    color: white;
+    display: block;
+    padding: 0.0625;
+}
+
+nav li a:hover{
+    color: var(--primary-color);
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*home*/
+.bg-home{
+    background: url("img/1.jpg");
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-blend-mode: multiply;
+    background-color: var(--overlay);
+}
+
+.home hr{
+    color: var(--primary-color);
+    margin-top: 2rem;
+}
+
+.home p{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+/*features*/
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 100;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.features-card{
+    border: 1px solid white;
+    width: 29rem;
+    font-size: 1.5rem;
+    margin: 3rem;
+    padding: 1.5em;
+
+}
+
+.features-card i{
+    font-size: 7rem;
+}
+
+.information-one li, .information-two li{
+    font-size: 1rem;
+    margin: 0.3rem;
+}
+
+#information-two{
+    background-color: var(--grey);
+}
+
+h1{
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+h2,h3,h4,h5{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    padding: 0.2em;
+}
+
+h3{
+    font-size: 2.5rem;
+}
+
+h6{
+    font-size: 2rem;
+}
+
+/*button*/
+.btn{
+    padding: 0.4rem;
+    font-family: inherit;
+    font-weight: 300;
+    border-radius: 20px;
+    color:white;
+    background-color: var(--primary-color);
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: translateY(2px);
+}
+
+.btn-download, .btn-subscribe, .btn-order, .btn-purchase{
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0.4em 1.3rem;
+    box-shadow: -4px 3px 1px 1px var(--primary-color);
+    margin-bottom: 1.6rem;
+}
+
+
+.card{
+    width: 23rem;
+    height: auto;
+    margin: 3rem;
+    border: 2px 5px 7px 1px;
+}
+
+
+.avatar{
+    width:10rem;
+    height:10rem;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+.upper-section{
+    height: 35%;
+    background-color: black;
+    width: 100%;
+}
+
+.image container{
+    position: absolute;
+    top: 17%;
+    left: 27%;
+}
+
+
+.lower-section{
+    height: 65%;
+    padding: 0.095em;
+}
+
+
+.purchase p{
+    font-size: 3.1rem;
+}
+
+.bg-purchase{
+    margin-top: 2rem;
+    background: url("img/7.jpg");
+    background-position: center;
+    color: white;
+    background-blend-mode: multiply;
+    background-color: var(--overlay);
+}
+
+input[type="text"],input[type="email"],textarea{
+    display: block;
+    width: 100%;
+    outline: none;
+    background: transparent;
+    border: 2px solid;
+
+}
+
+.btn-submit{
+    color: var(--primary-color);
+    background: white;
+    font-size: 2rem;
+    width: 100%;
+    text-transform: uppercase;
+    margin-top: 1.2rem;
+}
+
+.btn-submit:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+footer{
+    background: var(--primary-color);
+    color: white;
+    height: 5rem;
+    padding: 1em;
+}
+
+
+
+@media(min-width:480px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+    }
+    #logo{
+        display: unset;
+        height: 70px;
+        width: 70px;
+    }
+
+    nav li a{
+        color: black;
+        margin-right: 0.9em;
+    }
+
+    nav ul{
+        display: flex;
+    }
+}
+
+@media(min-width:720px){
+    h1{
+        font-size: 5rem;
+    }
+
+    h2,h3,h4,h5{
+        font-size: 3.5em;
+    }
+    .home, .information-one, .information-two, form{  
+        width: 80%;
+        margin: auto;
+    }
+    .btn{
+        width: 25rem;
+    }
+}
+
+@media (min-width:800px){
+    *{
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+    }
+
+    .information-one,.information-two{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .grid-item-one, .grid-item-two{
+        margin: auto;
+    }
+    h3{
+        font-size:2.2rem ;
+    }
+    form{
+        width: 55rem;
+    }
+    .purchase{
+        padding: 10rem;
+    }
+    footer{
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+}
+
+@media(min-width:1200px){
+    .center{
+        max-width:1200px;
+    }
+    header{
+        justify-content:space-evenly ;
+    }
+}
+
+@media(max-width:310px){
+    *{
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+}
